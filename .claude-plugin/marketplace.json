@@ -16,6 +16,12 @@
       "description": "Session retrospective — reviews what went well, what didn't, and what to remember",
       "version": "1.0.0",
       "source": "./plugins/retro/"
+    },
+    {
+      "name": "setup",
+      "description": "Project setup — generates CLAUDE.md and recommends plugins based on your repo",
+      "version": "1.0.0",
+      "source": "./plugins/setup/"
     }
   ]
 }

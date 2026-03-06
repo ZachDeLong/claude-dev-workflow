@@ -1,0 +1,5 @@
+{
+  "name": "setup",
+  "version": "1.0.0",
+  "description": "Project setup — generates CLAUDE.md and recommends plugins based on your repo"
+}

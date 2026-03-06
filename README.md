@@ -50,6 +50,20 @@ Session retrospective — run after finishing work to review what happened. Anal
 
 Optionally saves key learnings to your CLAUDE.md or memory files.
 
+### `/setup`
+
+Project setup — scans your repo and generates a minimal, practical CLAUDE.md. Like what a senior dev would write in 5 minutes to onboard a teammate.
+
+**What it generates:**
+- Stack one-liner (framework + language + database + deployment)
+- Commands (dev, build, test, lint — pulled from package.json/Makefile/etc.)
+- Key paths (important directories and files)
+- Conventions (patterns detected from actual code)
+- Environment variables (from .env.example)
+- Plugin recommendations for your stack
+
+Works on new projects (generates from scratch) and existing projects (suggests improvements to existing CLAUDE.md).
+
 ## Install
 
 In Claude Code:
@@ -58,7 +72,7 @@ In Claude Code:
 /plugin → Add Marketplace → zachd/claude-custom-skills
 ```
 
-Then enable the plugins you want (`advisor`, `retro`) when prompted.
+Then enable the plugins you want (`advisor`, `retro`, `setup`) when prompted.
 
 ## License
 
