@@ -3,7 +3,7 @@ name: checkpoint
 description: "Use when pausing work mid-session or before ending a session. Saves a snapshot of progress so the next session can pick up where you left off."
 metadata:
   author: zachd
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Session Checkpoint
@@ -31,6 +31,7 @@ Silently review the conversation history. Identify:
 - What gotchas, blockers, or important context was discovered?
 - What files were modified?
 - Are there uncommitted changes?
+- **Depth check:** Was this a complex session? (multiple decisions, dead ends, architecture discussions, approaches tried and abandoned, important context discovered). If yes, include the full Context & Decisions section.
 
 ### Step 2: Check for uncommitted changes
 
@@ -64,7 +65,12 @@ Use this format:
 ## Watch Out For
 - [Gotchas discovered during the session]
 - [Important context the next session needs]
-- [Decisions made and why — so the next session doesn't re-debate them]
+
+## Context & Decisions (include if session was complex)
+- [Key decision made and WHY — so the next session doesn't re-debate it]
+- [Approach that was tried and didn't work — so it's not tried again]
+- [Architecture or design understanding gained during the session]
+- [Things that were discussed but intentionally deferred — and why]
 
 ## Uncommitted Changes
 - [List of modified/new files from git status, or "All changes committed"]
@@ -72,6 +78,14 @@ Use this format:
 ## Files Touched
 - [Key files that were created or modified this session]
 ```
+
+### Step 3b: Decide on depth
+
+**Simple sessions** (quick bug fix, single feature, no dead ends): skip the "Context & Decisions" section. Keep it tight.
+
+**Complex sessions** (multiple decisions, approaches tried, architecture discussions, dead ends encountered, important discoveries): include "Context & Decisions." This is the difference between a bookmark and cliff notes — the next session needs this context to not repeat mistakes or re-debate settled decisions.
+
+When in doubt, include it. Too much context is better than too little for a session handoff.
 
 ### Step 4: Save the checkpoint file
 
