@@ -28,6 +28,12 @@
       "description": "Pair programming — Claude drives, you navigate. One change at a time with approval.",
       "version": "1.0.0",
       "source": "./plugins/pair/"
+    },
+    {
+      "name": "checkpoint",
+      "description": "Session checkpoint — saves where you left off so the next session can pick up",
+      "version": "1.0.0",
+      "source": "./plugins/checkpoint/"
     }
   ]
 }

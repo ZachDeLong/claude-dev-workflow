@@ -76,6 +76,19 @@ Pair programming — Claude drives, you navigate. Claude proposes one logical ch
 
 Say "faster" for bigger steps, "slower" for more explanation, or "just do it" to let Claude run on a specific change.
 
+### `/checkpoint`
+
+Save a snapshot of where you are mid-session. Records what's done, what's in progress, what's next, and what to watch out for. Saves to `.claude/checkpoint.md` so your next session can pick up automatically.
+
+**What it saves:**
+- Completed work
+- In-progress items (with current state)
+- What's next (in priority order)
+- Gotchas and important context
+- Uncommitted changes and files touched
+
+The next session auto-detects the checkpoint and offers to resume where you left off.
+
 ## Install
 
 In Claude Code:
@@ -84,7 +97,7 @@ In Claude Code:
 /plugin → Add Marketplace → zachd/claude-custom-skills
 ```
 
-Then enable the plugins you want (`advisor`, `retro`, `setup`, `pair`) when prompted.
+Then enable the plugins you want (`advisor`, `retro`, `setup`, `pair`, `checkpoint`) when prompted.
 
 ## License
 
